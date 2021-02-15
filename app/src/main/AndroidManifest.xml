@@ -2,13 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.beautiessskincare">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/config_network"
         android:theme="@style/Theme.BeautieSSSkincare">
+        <activity android:name=".Activity.BaruActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,6 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.LoginActivity"></activity>
+        <activity android:name=".Activity.MasukActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.DetailProdukActivity" />
+        <activity android:name=".Activity.PengirimanActivity" />
+        <activity android:name=".Activity.TambahAlamatActivity" />
+        <activity android:name=".Activity.ListAlamatActivity" />
     </application>
 
 </manifest>
